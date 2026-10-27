@@ -27,8 +27,22 @@ for calificacion in calificaciones:
 promedio = suma / len(calificaciones)
 
 
-# 4. Imprimir los resultados finales.
+# 4. Contador para verificar cuantos estudiantes reprobaron o aprobaron.
+
+aprobados = 0
+reprobados = 0
+
+for nota in calificaciones:
+    if nota >= 3.0:
+        aprobados += 1
+    else:
+        reprobados += 1
+
+
+# 5. Imprimir los resultados finales.
 print("Total de calificaciones:", calificaciones)
 print(f"Promedio general del grupo: {promedio:.2f}")
 print("Calificacion más alta:", max(calificaciones))
 print("Calificacion más baja:", min(calificaciones))
+print("Cantidad de estudiantes aprobados:", aprobados)
+print("Cantidad de estudiantes reprobados:", reprobados)
